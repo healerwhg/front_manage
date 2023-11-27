@@ -1,0 +1,755 @@
+@import "./mixin.scss";
+@import "./transition.scss";
+@import "./element-ui.scss";
+@import "./variables.scss"; //公共样式变量
+
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: "iconfont";
+  /* Project id 3296300 */
+  src: url("//at.alicdn.com/t/font_3296300_s34sbr5ky.woff2?t=1649142116716")
+      format("woff2"),
+    url("//at.alicdn.com/t/font_3296300_s34sbr5ky.woff?t=1649142116716")
+      format("woff"),
+    url("//at.alicdn.com/t/font_3296300_s34sbr5ky.ttf?t=1649142116716")
+      format("truetype");
+}
+
+.iconfont {
+  font-family: "iconfont";
+  font-weight: normal;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+.color-primary {
+  color: $color-primary;
+  &:focus,
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.color-primary-1 {
+  color: $color-primary-1;
+  &:focus,
+  &:hover {
+    color: $color-primary-1;
+  }
+}
+
+.color-primary-2 {
+  color: $color-primary-2;
+  &:focus,
+  &:hover {
+    color: $color-primary-2;
+  }
+}
+
+.color-primary-3 {
+  color: $color-primary-3;
+  &:focus,
+  &:hover {
+    color: $color-primary-3;
+  }
+}
+
+.color-primary-4 {
+  color: $color-primary-4;
+  &:focus,
+  &:hover {
+    color: $color-primary-4;
+  }
+}
+
+.color-primary-5 {
+  color: $color-primary-5;
+  &:focus,
+  &:hover {
+    color: $color-primary-5;
+  }
+}
+
+.color-primary-6 {
+  color: $color-primary-6;
+  &:focus,
+  &:hover {
+    color: $color-primary-6;
+  }
+}
+
+.color-primary-7 {
+  color: $color-primary-7;
+  &:focus,
+  &:hover {
+    color: $color-primary-7;
+  }
+}
+
+.color-primary-8 {
+  color: $color-primary-8;
+  &:focus,
+  &:hover {
+    color: $color-primary-8;
+  }
+}
+
+.color-primary-9 {
+  color: $color-primary-9;
+  &:focus,
+  &:hover {
+    color: $color-primary-9;
+  }
+}
+
+.color-primary-10 {
+  color: $color-primary-10;
+  &:focus,
+  &:hover {
+    color: $color-primary-10;
+  }
+}
+
+.color-success {
+  color: $color-success;
+  &:focus,
+  &:hover {
+    color: $color-success;
+  }
+}
+
+.color-success-1 {
+  color: $color-success-1;
+  &:focus,
+  &:hover {
+    color: $color-success-1;
+  }
+}
+
+.color-success-2 {
+  color: $color-success-2;
+  &:focus,
+  &:hover {
+    color: $color-success-2;
+  }
+}
+
+.color-success-3 {
+  color: $color-success-3;
+  &:focus,
+  &:hover {
+    color: $color-success-3;
+  }
+}
+
+.color-success-4 {
+  color: $color-success-4;
+  &:focus,
+  &:hover {
+    color: $color-success-4;
+  }
+}
+
+.color-success-5 {
+  color: $color-success-5;
+  &:focus,
+  &:hover {
+    color: $color-success-5;
+  }
+}
+
+.color-success-6 {
+  color: $color-success-6;
+  &:focus,
+  &:hover {
+    color: $color-success-6;
+  }
+}
+
+.color-success-7 {
+  color: $color-success-7;
+  &:focus,
+  &:hover {
+    color: $color-success-7;
+  }
+}
+
+.color-success-8 {
+  color: $color-success-8;
+  &:focus,
+  &:hover {
+    color: $color-success-8;
+  }
+}
+
+.color-success-9 {
+  color: $color-success-9;
+  &:focus,
+  &:hover {
+    color: $color-success-9;
+  }
+}
+
+.color-success-10 {
+  color: $color-success-10;
+  &:focus,
+  &:hover {
+    color: $color-success-10;
+  }
+}
+
+.color-warning {
+  color: $color-warning;
+  &:focus,
+  &:hover {
+    color: $color-warning;
+  }
+}
+
+.color-warning-1 {
+  color: $color-warning-1;
+  &:focus,
+  &:hover {
+    color: $color-warning-1;
+  }
+}
+
+.color-warning-2 {
+  color: $color-warning-2;
+  &:focus,
+  &:hover {
+    color: $color-warning-2;
+  }
+}
+
+.color-warning-3 {
+  color: $color-warning-3;
+  &:focus,
+  &:hover {
+    color: $color-warning-3;
+  }
+}
+
+.color-warning-4 {
+  color: $color-warning-4;
+  &:focus,
+  &:hover {
+    color: $color-warning-4;
+  }
+}
+
+.color-warning-5 {
+  color: $color-warning-5;
+  &:focus,
+  &:hover {
+    color: $color-warning-5;
+  }
+}
+
+.color-warning-6 {
+  color: $color-warning-6;
+  &:focus,
+  &:hover {
+    color: $color-warning-6;
+  }
+}
+
+.color-warning-7 {
+  color: $color-warning-7;
+  &:focus,
+  &:hover {
+    color: $color-warning-7;
+  }
+}
+
+.color-warning-8 {
+  color: $color-warning-8;
+  &:focus,
+  &:hover {
+    color: $color-warning-8;
+  }
+}
+
+.color-warning-9 {
+  color: $color-warning-9;
+  &:focus,
+  &:hover {
+    color: $color-warning-9;
+  }
+}
+
+.color-warning-10 {
+  color: $color-warning-10;
+  &:focus,
+  &:hover {
+    color: $color-warning-10;
+  }
+}
+
+.color-danger {
+  color: $color-danger;
+  &:focus,
+  &:hover {
+    color: $color-danger;
+  }
+}
+
+.color-danger-1 {
+  color: $color-danger-1;
+  &:focus,
+  &:hover {
+    color: $color-danger-1;
+  }
+}
+
+.color-danger-2 {
+  color: $color-danger-2;
+  &:focus,
+  &:hover {
+    color: $color-danger-2;
+  }
+}
+
+.color-danger-3 {
+  color: $color-danger-3;
+  &:focus,
+  &:hover {
+    color: $color-danger-3;
+  }
+}
+
+.color-danger-4 {
+  color: $color-danger-4;
+  &:focus,
+  &:hover {
+    color: $color-danger-4;
+  }
+}
+
+.color-danger-5 {
+  color: $color-danger-5;
+  &:focus,
+  &:hover {
+    color: $color-danger-5;
+  }
+}
+
+.color-danger-6 {
+  color: $color-danger-6;
+  &:focus,
+  &:hover {
+    color: $color-danger-6;
+  }
+}
+
+.color-danger-7 {
+  color: $color-danger-7;
+  &:focus,
+  &:hover {
+    color: $color-danger-7;
+  }
+}
+
+.color-danger-8 {
+  color: $color-danger-8;
+  &:focus,
+  &:hover {
+    color: $color-danger-8;
+  }
+}
+
+.color-danger-9 {
+  color: $color-danger-9;
+  &:focus,
+  &:hover {
+    color: $color-danger-9;
+  }
+}
+
+.color-danger-10 {
+  color: $color-danger-10;
+  &:focus,
+  &:hover {
+    color: $color-danger-10;
+  }
+}
+
+.color-info {
+  color: $color-info;
+  &:focus,
+  &:hover {
+    color: $color-info;
+  }
+}
+
+.color-info-1 {
+  color: $color-info-1;
+  &:focus,
+  &:hover {
+    color: $color-info-1;
+  }
+}
+
+.color-info-2 {
+  color: $color-info-2;
+&:focus,
+  &:hover {
+    color: $color-info-2;
+  }
+}
+
+.color-info-3 {
+  color: $color-info-3;
+  &:focus,
+  &:hover {
+    color: $color-info-3;
+  }
+}
+
+.color-info-4 {
+  color: $color-info-4;
+  &:focus,
+  &:hover {
+    color: $color-info-4;
+  }
+}
+
+.color-info-5 {
+  color: $color-info-5;
+  &:focus,
+  &:hover {
+    color: $color-info-5;
+  }
+}
+
+.color-text-primary {
+  color: $color-text-primary;
+}
+
+.color-text-regular {
+  color: $color-text-regular;
+}
+
+.color-text-secondary {
+  color: $color-text-secondary;
+}
+
+.hierarchy {
+  font-size: 12px;
+  color: $color-text-secondary;
+}
+
+.selected .hierarchy {
+  color: #409eff;
+}
+
+
+.page-form,
+.table-box,
+.container-box {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 15px 15px 0;
+  border-radius: 4px;
+  background: #fff;
+  overflow-y: auto;
+
+  .el-col {
+    height: 100%;
+  }
+
+  .search-form {
+    .el-form-item {
+      margin-right: 20px;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .table-container {
+    background: #fff;
+    width: 100%;
+    height: calc(100% - 140px);
+    box-sizing: border-box;
+    padding: 15px 0;
+  }
+
+  .table-data{
+    width: 100%;
+    height: calc(100% - 100px);
+    &.no-page{
+      height: calc(100% - 52px);
+    }
+  }
+
+  .el-pagination {
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  .tool-bar {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 15px;
+    border: 1px solid $border-color-lighter;
+    border-bottom: none;
+    background: $background-color-base;
+
+    .tool-left {
+      .el-button--small {
+        padding: 9px 10px;
+        color: $color-text-regular;
+        color: #fff;
+      }
+    }
+
+    .tool-right {
+      .el-button--small {
+        padding: 5px 6px;
+        font-size: 16px;
+        color: $color-text-regular;
+      }
+
+      .el-button:hover,
+      .el-button:focus {
+        color: $color-text-regular;
+        border-color: $border-color-lighter;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .left-table {
+    height: 100%;
+    margin-right: 15px;
+    flex-shrink: 0;
+    background: #fff;
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .el-table__body tr.current-row > td {
+      background-color: $color-primary-1;
+    }
+  }
+
+  .right-table {
+    height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 15px;
+    background: #fff;
+  }
+}
+
+// .page-form{
+//   height: calc(100% - 40px);
+//   overflow: hidden;
+// }
+
+.el-form-item__label {
+  text-align: right;
+  vertical-align: middle;
+  float: left;
+  font-size: 14px;
+  color: $color-text-regular;
+  line-height: 40px;
+  padding: 0 12px 0 0;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+.el-dialog__header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $border-color-lighter;
+  box-sizing: border-box;
+  padding-bottom: 12px;
+  padding-top: 15px;
+}
+
+.el-select {
+  width: 100%;
+}
+
+.img-uploader {
+  width: 100px;
+  height: 100px;
+
+  .el-upload {
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      border-color: $color-primary-5;
+    }
+
+    .img-uploader-icon {
+      font-size: 28px;
+      color: $color-info;
+      text-align: center;
+    }
+
+    .img {
+      width: 100px;
+      height: 100px;
+      display: block;
+      object-fit: cover;
+    }
+  }
+}
+
+.editorcom .el-form-item__content {
+  line-height: unset;
+}
+
+.el-button [class*="el-icon-"] + span {
+  margin-left: 0;
+}
+
+.checkbox-groups {
+  .checkbox-group {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid $border-color-light;
+    margin-bottom: 15px;
+
+    h1 {
+      font-size: 16px;
+      font-weight: 400;
+      color: $color-text-primary;
+      box-sizing: border-box;
+      border-bottom: 1px solid $border-color-light;
+      padding: 15px;
+    }
+
+    .el-checkbox-group {
+      box-sizing: border-box;
+      padding: 15px 7px 7px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .el-checkbox {
+        margin: 0 8px 8px;
+      }
+    }
+  }
+}
+
+.el-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 !important;
+  .el-dialog__body {
+    max-height: 600px;
+    overflow: auto;
+  }
+}

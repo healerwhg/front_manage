@@ -1,0 +1,32 @@
+/**
+* element-ui 主题颜色自定义
+**/
+
+/* 主题颜色 */
+$--color-primary: #409eff;
+$--color-success: #67c23a;
+$--color-info: #909399;
+$--color-warning: #e6a23c;
+$--color-danger: #f56c6c;
+
+// $--button-font-weight: 400;
+
+// $--color-text-regular: #1f2d3d;
+
+// $--border-color-light: #dfe4ed;
+// $--border-color-lighter: #e6ebf5;
+
+// $--table-border: 1px solid #dfe6ec;
+
+/* 图标字体路径，必需的 */
+$--font-path: "~element-ui/lib/theme-chalk/fonts";
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+    theme: $--color-primary;
+  }
+  
